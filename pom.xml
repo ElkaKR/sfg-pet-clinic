@@ -48,6 +48,13 @@
                     <mainClass>learn.sfgpetclinic.SfgPetClinicApplication</mainClass>
                 </configuration>
             </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <configuration>
+                        <goals>install</goals>
+                    </configuration>
+                </plugin>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
@@ -75,5 +82,9 @@
             </plugin>
         </plugins>
     </build>
+
+    <scm>
+        <developerConnection>scm:git:https://github.com/ElkaKR/sfg-pet-clinic.git</developerConnection>
+    </scm>
 
 </project>
