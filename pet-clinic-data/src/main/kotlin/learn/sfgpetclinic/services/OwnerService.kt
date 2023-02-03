@@ -1,11 +1,9 @@
 package learn.sfgpetclinic.services
 
 import learn.sfgpetclinic.model.Owner
-import kotlin.collections.Set
+import learn.sfgpetclinic.services.CrudService
 
-interface OwnerService {
+interface OwnerService: CrudService <Owner, Long> {
     fun findByLastName(lastName:String):Owner
-    fun findByID(id:Long):Owner
-    fun save(owner: Owner):Owner
-    fun findAll(): Set<Owner>
+
 }
