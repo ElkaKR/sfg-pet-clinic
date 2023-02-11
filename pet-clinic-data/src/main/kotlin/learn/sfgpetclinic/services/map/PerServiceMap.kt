@@ -2,7 +2,9 @@ package learn.sfgpetclinic.services.map
 
 import learn.sfgpetclinic.model.Pet
 import learn.sfgpetclinic.services.PetService
+import org.springframework.stereotype.Service
 
+@Service
 class PetServiceMap:AbstractMapService<Pet, Long>(), PetService {
 
     override fun findByID(id: Long): Pet {

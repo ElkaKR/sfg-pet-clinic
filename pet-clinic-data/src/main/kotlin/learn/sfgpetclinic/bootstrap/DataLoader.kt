@@ -4,16 +4,16 @@ import learn.sfgpetclinic.model.Owner
 import learn.sfgpetclinic.model.Vet
 import learn.sfgpetclinic.services.OwnerService
 import learn.sfgpetclinic.services.VetService
-import learn.sfgpetclinic.services.map.OwnerServiceMap
-import learn.sfgpetclinic.services.map.VetServiceMap
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
 
 @Component
 class DataLoader : CommandLineRunner {
-
-    private final val ownerService: OwnerService = OwnerServiceMap()
-    private final val vetService: VetService = VetServiceMap()
+    @Autowired
+    lateinit var ownerService: OwnerService
+    @Autowired
+    lateinit var vetService: VetService
 
     override fun run(vararg args: String?) {
         Owner().apply {
