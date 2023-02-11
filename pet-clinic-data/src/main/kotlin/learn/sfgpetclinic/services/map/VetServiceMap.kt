@@ -1,9 +1,9 @@
 package learn.sfgpetclinic.services.map
 
 import learn.sfgpetclinic.model.Vet
-import learn.sfgpetclinic.services.CrudService
+import learn.sfgpetclinic.services.VetService
 
-class VetServiceMap:AbstractMapService<Vet, Long>(), CrudService<Vet, Long> {
+class VetServiceMap:AbstractMapService<Vet, Long?>(), VetService {
     override fun findByID(id: Long): Vet {
        return this.findByID(id)
     }

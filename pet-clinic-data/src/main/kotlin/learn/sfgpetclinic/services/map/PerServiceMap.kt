@@ -1,16 +1,16 @@
 package learn.sfgpetclinic.services.map
 
 import learn.sfgpetclinic.model.Pet
-import learn.sfgpetclinic.services.CrudService
+import learn.sfgpetclinic.services.PetService
 
-class PerServiceMap:AbstractMapService<Pet, Long>(), CrudService<Pet, Long> {
+class PetServiceMap:AbstractMapService<Pet, Long>(), PetService {
 
     override fun findByID(id: Long): Pet {
        return this.findByID(id)
     }
 
     override fun save(data: Pet): Pet {
-        return super.save(data.id, data)
+        return this.save( data)
     }
 
     override fun deleteById(id: Long) {

@@ -1,8 +1,8 @@
 package learn.sfgpetclinic.model
 
-open class Person {
+open class Person: BaseEntity() {
 
-    val firstName:String = ""
-    val lastName:String = ""
+    var firstName:String = ""
+    var lastName:String = ""
 
 }

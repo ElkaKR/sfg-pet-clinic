@@ -1,9 +1,12 @@
 package learn.sfgpetclinic.services.map
 
 import learn.sfgpetclinic.model.Owner
-import learn.sfgpetclinic.services.CrudService
+import learn.sfgpetclinic.services.OwnerService
 
-class OwnerServiceMap:AbstractMapService<Owner, Long>(),CrudService<Owner, Long>{
+class OwnerServiceMap:AbstractMapService<Owner, Long?>(), OwnerService {
+    override fun findByLastName(lastName: String): Owner {
+        TODO("Not yet implemented")
+    }
 
     override fun findByID(id: Long): Owner {
         return this.findByID(id)
