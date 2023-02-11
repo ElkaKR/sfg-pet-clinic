@@ -17,23 +17,19 @@ class DataLoader : CommandLineRunner {
 
     override fun run(vararg args: String?) {
         Owner().apply {
-            id = 1L
             firstName = "Michael"
             lastName = "Weston"
         }.also { ownerService.save(it) }
         Owner().apply {
-            id = 2L
             firstName = "Fiona"
             lastName = "Glenanne"
         }.also { ownerService.save(it) }
         println("Loaded owners...")
         Vet().apply {
-            id = 1L
             firstName = "Sam"
             lastName = "Axe"
         }.also { vetService.save(it) }
         Vet().apply {
-            id = 2L
             firstName = "John"
             lastName = "Silver"
         }.also { vetService.save(it) }

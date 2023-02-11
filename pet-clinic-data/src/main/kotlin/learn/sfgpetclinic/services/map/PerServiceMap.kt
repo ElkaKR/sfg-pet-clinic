@@ -11,10 +11,6 @@ class PetServiceMap:AbstractMapService<Pet, Long>(), PetService {
        return this.findByID(id)
     }
 
-    override fun save(data: Pet): Pet {
-        return this.save( data)
-    }
-
     override fun deleteById(id: Long) {
         return super.deleteByID(id)
     }
