@@ -23,8 +23,8 @@ class DataLoader : CommandLineRunner {
         }.also { ownerService.save(it) }
         Owner().apply {
             id = 2L
-            firstName = "Michael"
-            lastName = "Weston"
+            firstName = "Fiona"
+            lastName = "Glenanne"
         }.also { ownerService.save(it) }
         println("Loaded owners...")
         Vet().apply {
