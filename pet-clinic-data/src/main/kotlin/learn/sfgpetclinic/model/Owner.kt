@@ -1,5 +1,8 @@
 package learn.sfgpetclinic.model
 
 class Owner:Person() {
-      val pets:MutableSet<Pet> = mutableSetOf()
+      var adress:String? = null
+      var city:String? = null
+      var telephone:String? = null
+      var pets:MutableSet<Pet> = mutableSetOf()
 }
