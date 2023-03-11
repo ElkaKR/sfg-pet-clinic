@@ -1,5 +1,5 @@
 package learn.sfgpetclinic.model
 
-class PetType {
+class PetType:BaseEntity() {
     val name:String = ""
 }
