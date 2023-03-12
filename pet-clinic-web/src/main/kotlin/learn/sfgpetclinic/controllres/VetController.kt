@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping
 class VetController {
     @Autowired
     lateinit var vetService: VetService
-    @GetMapping("/vets","/vets/index","/vets/index.html")
+    @GetMapping("/vets","/vets/index","/vets/index.html","vets.html")
     fun listVets(model: Model):String{
         model.addAttribute("vets", vetService.findAll())
         return "vets/index"

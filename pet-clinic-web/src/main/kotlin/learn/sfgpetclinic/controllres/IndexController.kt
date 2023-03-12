@@ -9,4 +9,8 @@ class IndexController {
     fun index():String{
         return "index"
     }
+    @GetMapping("/oups")
+    fun oupsHandler(): String {
+        return "notimplemented"
+    }
 }
