@@ -7,7 +7,7 @@ abstract class AbstractMapService<T:BaseEntity, ID:Long>{
     fun findAll(): Set<T> {
         return HashSet(map.values)
     }
-    fun save(data:T):T{
+    open fun save(data:T):T{
         val idToSave = data.id ?: getNextId().also { data.id = it }
         return map.put(idToSave, data).let { data }
     }
